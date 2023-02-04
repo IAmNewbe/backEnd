@@ -12,3 +12,5 @@ const myEmitter = new EventEmitter();
 myEmitter.on('birthday', birthdayEventListener);
 
 myEmitter.emit('birthday', 'Hikam');
+
+console.log("testing")
