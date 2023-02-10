@@ -3,25 +3,9 @@
 const http = require('http');
 
 const requestListener = (request, response) => {
-    response.setHeader('Content-Type', 'text/html');
+    response.setHeader('Content-Type', 'application/json');
+    response.setHeader('X-Powered-By', 'NodeJS');
 
-    // const {method} = request;
-      // if (method == 'POST'){
-    //     // response.end('<h1>Hello!</h1>');
-    //     let body = [];
-    //     request.on('data', (chunk) => {
-    //         body.push(chunk);
-    //     });
-
-    //     request.on('end', () => {
-    //         body = Buffer.concat(body).toString();
-    //         const {name} = JSON.parse(body);
-    //         response.end(`<h1>Hai, ${name}!</h1>`);
-    //     });
-    // }
-    // if (method == 'GET') {
-    //     response.end('<h1>Hai</h1>');
-    // }
     const { method, url} = request;
     
     if (url === '/'){
